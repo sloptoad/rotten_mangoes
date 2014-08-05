@@ -1,0 +1,5 @@
+<%= link_to image_tag(@movie.img_url), movie_path(@movie) %>
+<h2><%= @movie.title %> (<%= link_to "edit", edit_movie_path(@movie) %>, <%= link_to "delete", movie_path(@movie), method: :delete, confirm: "You sure?" %>)</h2>
+
+<h4>Dir. <%= @movie.director %> | <%= @movie.runtime_in%> minutes</h4>
+<p><%= @movie.description %></p>
