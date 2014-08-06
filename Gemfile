@@ -30,6 +30,15 @@ gem 'spring',        group: :development
 gem 'bcrypt', '~> 3.1.7'
 gem 'pry-rails'
 gem "gritter", "1.1.0"
+# C_INCLUDE_PATH=/usr/local/Cellar/imagemagick/6.8.9-1/include/ImageMagick-6 PKG_CONFIG_PATH=/usr/local/Cellar/imagemagick/6.8.9-1/lib/pkgconfig/ gem install rmagick
+gem 'rmagick', :require => 'RMagick'
+gem 'carrierwave'
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+
 
 # Use unicorn as the app server
 # gem 'unicorn'
