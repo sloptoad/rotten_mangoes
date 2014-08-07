@@ -15,7 +15,7 @@ class ReviewsController < ApplicationController
     else
       render :new
     end
-  end
+  end 
 
   protected
 
@@ -26,4 +26,4 @@ class ReviewsController < ApplicationController
   def review_params
     params.require(:review).permit(:text, :rating_out_of_ten)
   end
-end
+
