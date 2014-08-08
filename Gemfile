@@ -34,10 +34,10 @@ gem "gritter", "1.1.0"
 gem 'rmagick', :require => 'RMagick'
 gem 'carrierwave'
 
-group :development do
-  gem "better_errors"
-  gem "binding_of_caller"
-end
+# group :development do
+#   gem "better_errors"
+#   gem "binding_of_caller"
+# end
 
 
 # Use unicorn as the app server

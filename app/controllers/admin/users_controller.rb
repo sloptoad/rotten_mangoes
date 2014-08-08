@@ -1,4 +1,5 @@
 class Admin::UsersController < ApplicationController
+ 
   def new
     @user = User.new
   end
@@ -33,7 +34,8 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-    @user.destroy
+    # @user.destroy
+    UserMailer.delete_notification(@user).deliver
     redirect_to movies_path
   end
 

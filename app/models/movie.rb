@@ -1,5 +1,5 @@
 class Movie < ActiveRecord::Base
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
   mount_uploader :image, ImageUploader
 
   validates :title,
@@ -25,6 +25,12 @@ class Movie < ActiveRecord::Base
       reviews.sum(:rating_out_of_ten)/reviews.size
     end
   end
+
+  def self.search(query)
+   
+    where("title like ?", "%#{query}%")
+  end
+
 
   # validates :release_date,
   #   presence: true

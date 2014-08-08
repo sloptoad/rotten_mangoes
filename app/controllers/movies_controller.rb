@@ -1,6 +1,12 @@
 class MoviesController < ApplicationController
+  
   def index
     @movies = Movie.all
+    if params[:search]
+       @movies = @movies.search(params[:search]).order("created_at DESC")
+    else
+      @movies.all.order('created_at DESC')
+    end
   end
 
   def show

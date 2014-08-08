@@ -10,10 +10,10 @@
         <% @review.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
-      </ul>
-    </div>
   <% end %>
 
+      </ul>
+    </div>
   <div>
     <%= f.label "text" %><br>
     <%= f.text_area "text" %>
@@ -24,3 +24,5 @@
   </div>
   <div><%= f.submit "Submit" %></div>
 <% end %>
+
+
