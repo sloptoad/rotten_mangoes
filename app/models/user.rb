@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :reviews
+  has_many :movies, dependent: :destroy
   has_secure_password
 
   def full_name

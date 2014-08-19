@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  
 
-  resources :users, only: [:create, :new]
+
+
+  resources :users, only: [:create, :new] 
+
+  get '/profile', to: 'users#show'
   
   namespace :admin do
     resources :users
@@ -15,6 +18,7 @@ Rails.application.routes.draw do
   
   resource :session, only: [:new, :create, :destroy]
   root to: 'movies#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

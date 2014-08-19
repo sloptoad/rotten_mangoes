@@ -1,3 +1,38 @@
 // Place all the styles related to the movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a{
+  font-size:30px;
+}
+
+ #profile-movies{
+  display:block;
+  font-size: 30px;
+ }
+
+ #movie-header{
+  margin-top:10px;
+  font-size: 50px;
+  text-align: center;
+  color:#F0F0F0;;
+  transition:all 2s ease;
+ }
+
+ #movie-header.change{
+   color:black;
+   font-size:110px;
+ }
+ img{
+  height:200px;
+  width:180px;
+  transition:all 1s
+ }
+ .img-grow{
+    height:250px;
+    width:23s0px;
+}
+#movie-display{
+  font-size:20px;
+}
+

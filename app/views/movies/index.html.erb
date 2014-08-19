@@ -1,19 +1,24 @@
-<h1>Rotten Mangoes</h1>
+<h1 id="movie-header">Rotten Mangoes</h1>
+<% if current_user %>
 <%= link_to "Submit a movie!", new_movie_path %>
+<%end%>
 <hr>
 <%= form_tag(movies_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Movies" %>
+   <%= text_field_tag :search, params[:search], placeholder: "Search Movies", id:"search-placeholder"%>
 
-  <%= submit_tag "Search", :title => nil %>
+   <%= submit_tag "Search", :title => nil, id: "submit-button" %>
 <% end %>
+<section class="movie-section" ><% @movies.each do |movie| %>
+  <div id="movie-display"><%= image_tag movie.image_url(:thumb).to_s%><br></br>
+  <%= link_to movie.title, movie_path(movie) %><br></br>
 
-<% @movies.each do |movie| %>
-  <h2><%= image_tag movie.image_url(:thumb).to_s%></h2>
-  <h2><%= link_to movie.title, movie_path(movie) %></h2>
+  Director: <%= movie.director %><br>Runtime: <%= movie.runtime_in %> minutes<br>
+  Description: <%= movie.description %><br>
 
-  <h4>Dir. <%= movie.director %> | <%= movie.runtime_in %> minutes</h4>
-  <p><%= movie.description %></p>
-  <h4> average rating:  <%= movie.review_average %> </h4>
+  <%= movie.review_average %><br>
+  </div>
+  <% end %>
+  </section>
 
   <hr>
-<% end %>
+

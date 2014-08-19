@@ -15,3 +15,57 @@
  *= require gritter
  */
 
+
+ @import url(http://fonts.googleapis.com/css?family=Lato:300|Amatic+SC);
+ 
+ *{
+   font-family: 'Amatic SC', cursive;
+ }
+ body{
+  background-color: #F0F0F0;
+ }
+ #movie-header{
+  height: 80px;
+ }
+ #movie-profile{
+  display:inline-block;
+  float:10px;
+  position:relative;
+ }
+
+ #movie-display{
+  text-align: vertical;
+  display:inline-block;
+  float:10px;
+  position:relative;
+ }
+
+ a{
+  color:black;
+ }
+ a:hover{
+  color:red;
+  text-decoration: none;
+  }
+
+  #submit-button{
+    border:0;
+    height:40px;
+    width:80px;
+    font-size:20px;
+    margin-left:30px;
+
+  }
+
+  #search-placeholder{
+    border:0;
+    height:40px;
+    width:120px;
+    font-size:20px;
+    }
+    .movie-section{
+      margin-top: 30px;
+    }
+
+
+

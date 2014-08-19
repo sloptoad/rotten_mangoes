@@ -15,3 +15,14 @@
 //= require turbolinks
 //= require_tree .
 //= require gritter
+
+$( document ).ready(function() {
+    $('#movie-header').addClass('change');
+
+    $('img').on('click',function(e){
+      e.preventDefault();
+      $(this).toggleClass('img-grow')
+  });
+  });
+
+
